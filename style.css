@@ -7,6 +7,13 @@
     padding: 0;
 }
 
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Open Sans", sans-serif;
 }
@@ -19,13 +26,7 @@ body {
     background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-}
-
-header {
-    background-color: #ff5aa4;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-image: url("/media/assets/7e089ac5bbb5231398b3dfa522c9aea9.jpg");
 }
 
 h1 {
@@ -40,10 +41,14 @@ h1 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-image: url("/media/assets/e4268c95b2b384452b4b23270a3af662.jpg");
+}
+
+.timeline-line {
+    border-left: 4px solid #ff5aa4;
 }
 
 .timeline-month {
-    border-left: 4px solid #ff5aa4;
     margin-bottom: 20px;
     padding-left: 20px;
 }
@@ -61,8 +66,8 @@ h1 {
 .timeline-item {
     margin: 20px 0;
     padding: 15px;
-    border-radius: 5px;
-    background: #e9ecef;
+    border-radius: 50px;
+    background: #e9ecefcc;
     position: relative;
 }
 
@@ -70,8 +75,11 @@ h1 {
     font-weight: bold;
     font-size: 1.1em;
     color: #555;
+    margin-left: 10px;
 }
-
+.timeline-date img {
+    margin-bottom: -3px;
+}
 .timeline-content {
     margin-top: 10px;
 }
@@ -85,8 +93,7 @@ h1 {
 .note {
     background: #fff9c4;
     border: 1px dashed #cddc39;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 50px 10px 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     margin-top: 10px;
@@ -96,6 +103,14 @@ h1 {
     align-items: center;
 }
 
+.note_a{
+    border-radius: 50px 0 50px 0;
+}
+
+.note_b{
+    border-radius: 0px 50px 0 50px;
+}
+
 .timeline-content img {
     max-width: 100%;
     border-radius: 5px;
@@ -103,6 +118,7 @@ h1 {
     width: 200px;
     height: auto;
     transition: transform 0.3s ease;
+    z-index: 8;
 }
 
 .timeline-content img:hover {
@@ -137,14 +153,16 @@ button:hover {
     background-color: #574bdb;
 }
 
-footer {
+header, footer {
     text-align: center;
-    padding: 20px;
     background-color: #ff5aa4;
     color: #fff;
     position: relative;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-attention {
