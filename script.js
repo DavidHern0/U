@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const timelineItems = document.querySelectorAll('.timeline-item');
-    let currentIndex = 0
+    let currentIndex = 0;
     const nextDayBtn = document.getElementById('next-day-btn');
+    const showAllCheckbox = document.getElementById('show-all-checkbox');
 
     const showNextDay = () => {
         if (currentIndex < timelineItems.length) {
             timelineItems[currentIndex].style.display = 'block';
-
             timelineItems[currentIndex].offsetHeight;
             timelineItems[currentIndex].classList.add('visible');
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonContainer.classList.add('button-container');
             buttonContainer.appendChild(nextDayBtn);
             timelineItems[currentIndex].appendChild(buttonContainer);
-            nextDayBtn.style.display = 'block';
+            nextDayBtn.style.display = 'block'; 
 
             currentIndex++;
         } else {
@@ -30,6 +30,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const showAllDays = () => {
+        timelineItems.forEach(item => {
+            item.style.display = 'block';
+            item.classList.add('visible');
+        });
+        nextDayBtn.style.display = 'none';
+        localStorage.setItem('showAll', 'true');
+    };
+
     nextDayBtn.addEventListener('click', showNextDay);
-    showNextDay();
+
+    showAllCheckbox.addEventListener('change', () => {
+        if (showAllCheckbox.checked) {
+            showAllDays();
+        } else {
+            currentIndex = 0;
+            nextDayBtn.style.display = 'block'
+            timelineItems.forEach(item => {
+                item.style.display = 'none';
+                item.classList.remove('visible');
+            });
+            showNextDay();
+            localStorage.setItem('showAll', 'false'); 
+        }
+    });
+    const showAllStored = localStorage.getItem('showAll');
+    if (showAllStored === 'true') {
+        showAllCheckbox.checked = true;
+        showAllDays();
+    } else {
+        showNextDay();
+        resetTimeline();
+    }
 });
