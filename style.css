@@ -12,12 +12,19 @@ img {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-  }
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Open Sans", sans-serif;
 }
-p, footer {
+
+p,
+footer {
     font-family: "Lato", sans-serif;
 }
 
@@ -27,6 +34,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-image: url("/media/assets/7e089ac5bbb5231398b3dfa522c9aea9.jpg");
+    background-attachment: fixed;
 }
 
 h1 {
@@ -69,7 +77,19 @@ h1 {
     border-radius: 50px;
     background: #e9ecefcc;
     position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    display: none;
 }
+
+.timeline-item.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .timeline-date {
     font-weight: bold;
@@ -77,9 +97,11 @@ h1 {
     color: #555;
     margin-left: 10px;
 }
+
 .timeline-date img {
     margin-bottom: -3px;
 }
+
 .timeline-content {
     margin-top: 10px;
 }
@@ -93,7 +115,7 @@ h1 {
 .note {
     background: #fff9c4;
     border: 1px dashed #cddc39;
-    padding: 10px 50px 10px 50px;
+    padding: 10px 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     margin-top: 10px;
@@ -103,11 +125,11 @@ h1 {
     align-items: center;
 }
 
-.note_a{
+.note_a {
     border-radius: 50px 0 50px 0;
 }
 
-.note_b{
+.note_b {
     border-radius: 0px 50px 0 50px;
 }
 
@@ -124,8 +146,9 @@ h1 {
 .timeline-content img:hover {
     cursor: pointer;
 }
+
 .timeline-content img.active {
-    transform: scale(2); 
+    transform: scale(2);
     z-index: 10;
     position: relative;
 }
@@ -153,7 +176,8 @@ button:hover {
     background-color: #574bdb;
 }
 
-header, footer {
+header,
+footer {
     text-align: center;
     background-color: #ff5aa4;
     color: #fff;
@@ -174,4 +198,29 @@ header, footer {
     justify-items: center;
     border-radius: 16px;
     padding: 20px;
+}
+
+#next-day-btn {
+    background-color: #ff5aa4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#next-day-btn:hover {
+    background-color: #d94f90;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
