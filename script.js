@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const nextDayBtn = document.getElementById('next-day-btn');
     const showAllCheckbox = document.getElementById('show-all-checkbox');
+    const welcomePopup = document.getElementById('welcome-popup');
+    const closePopupBtn = document.getElementById('close-popup-btn');
+
+    if (!localStorage.getItem('popupShown')) {
+        welcomePopup.style.display = 'flex';
+    }
 
     const showNextDay = () => {
         if (currentIndex < timelineItems.length) {
@@ -20,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonContainer.classList.add('button-container');
             buttonContainer.appendChild(nextDayBtn);
             timelineItems[currentIndex].appendChild(buttonContainer);
-            nextDayBtn.style.display = 'block'; 
+            nextDayBtn.style.display = 'block';
 
             currentIndex++;
         } else {
@@ -39,28 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('showAll', 'true');
     };
 
+    const resetTimeline = () => {
+        currentIndex = 0;
+        nextDayBtn.style.display = 'block';
+        timelineItems.forEach(item => {
+            item.style.display = 'none';
+            item.classList.remove('visible');
+        });
+        showNextDay();
+        localStorage.setItem('showAll', 'false');
+    };
+
     nextDayBtn.addEventListener('click', showNextDay);
 
     showAllCheckbox.addEventListener('change', () => {
         if (showAllCheckbox.checked) {
             showAllDays();
         } else {
-            currentIndex = 0;
-            nextDayBtn.style.display = 'block'
-            timelineItems.forEach(item => {
-                item.style.display = 'none';
-                item.classList.remove('visible');
-            });
-            showNextDay();
-            localStorage.setItem('showAll', 'false'); 
+            resetTimeline();
         }
     });
+
+    closePopupBtn.addEventListener('click', () => {
+        welcomePopup.style.display = 'none';
+        localStorage.setItem('popupShown', 'true');
+    });
+
     const showAllStored = localStorage.getItem('showAll');
     if (showAllStored === 'true') {
         showAllCheckbox.checked = true;
         showAllDays();
     } else {
-        showNextDay();
         resetTimeline();
     }
 });
