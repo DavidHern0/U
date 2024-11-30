@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Lato:wght@100..900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f7f7f7;
+    background-image: url("/media/assets/7e089ac5bbb5231398b3dfa522c9aea9.jpg");
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.question p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #ff5aa4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #d94f90;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+button[data-answer="incorrect"]:disabled {
+    background-color: #D32F2F;
+    color: white;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: #ff5aa4;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+.footer_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
