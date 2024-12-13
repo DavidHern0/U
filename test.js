@@ -2,16 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-button");
     const startContainer = document.getElementById("start-container");
     const quizContainer = document.querySelector(".container");
+    const finalMessage = document.getElementById("final-container");
+    const finalScore = document.getElementById("final-score");
+    const questionsContainer = document.getElementById("quiz");
+    const questions = document.querySelectorAll(".question");
+
+    let currentQuestion = 0;
+    let incorrectAnswers = 0;
+
     quizContainer.style.display = "none";
-    
+
     startButton.addEventListener("click", () => {
         startContainer.style.display = "none";
         quizContainer.style.display = "block";
         showQuestion(currentQuestion);
     });
-
-    const questionsContainer = document.getElementById("quiz");
-    let currentQuestion = 0;
 
     function shuffleAnswers(question) {
         const buttons = Array.from(question.querySelectorAll("button"));
@@ -30,16 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showQuestion(index) {
-        const questions = document.querySelectorAll(".question");
         questions.forEach((q, i) => {
             q.style.display = i === index ? "block" : "none";
         });
         shuffleAnswers(questions[index]);
     }
 
-    const questions = document.querySelectorAll(".question");
     questions.forEach((question, index) => {
         const buttons = question.querySelectorAll("button");
+        let notFailed = true;
 
         buttons.forEach((button) => {
             button.addEventListener("click", (e) => {
@@ -64,10 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (index + 1 < questions.length) {
                             showQuestion(index + 1);
                         } else {
-                            document.getElementById("quiz").innerHTML = "<h2>¡Test completado!</h2>";
+                            showFinalMessage();
+                            quizContainer.style.display = "none";
                         }
-                    }, 2000);
+                    }, 2);
                 } else {
+                    if (notFailed) {
+                        incorrectAnswers++;
+                        notFailed = false;
+                    }
                     e.target.style.backgroundColor = "#D32F2F";
                     e.target.disabled = true;
                     e.target.style.cursor = "not-allowed";
@@ -77,6 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+    function showFinalMessage() {
+        quizContainer.innerHTML = "";
+        finalMessage.style.display = "block";
+        finalScore.textContent = `Has acertado ${questions.length - incorrectAnswers}/${questions.length} preguntas`;
+
+        const finalImage = document.getElementById("final-image");
+
+        const feedbackOptions = [
+            { minScore: questions.length, src: "media/assets/cat-cat-jumping.gif"},
+            { minScore: !questions.length, src: "media/assets/sus.gif"}
+        ];
+    
+        const feedback = feedbackOptions.find(option => questions.length - incorrectAnswers >= option.minScore);
+    
+        finalImage.src = feedback.src;
+        finalImage.alt = finalScore.textContent;
+    }
 
     shuffleQuestions();
 });
