@@ -102,3 +102,54 @@ header,
     align-items: center;
 
 }
+
+.select_test {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 90, 164, 0.1);
+    border: 1px solid rgba(255, 90, 164, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.select_test ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.select_test li {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.select_test a,
+.return{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #ff5aa4;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    width: min-content;
+}
+
+.select_test a{
+    width: 100%;
+}
+.select_test a:hover {
+    background-color: #d94f90;
+    color: white;
+}
+
+.return:hover {
+    color: #b93e76;
+}

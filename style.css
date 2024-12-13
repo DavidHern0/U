@@ -277,7 +277,6 @@ header {
     align-items: center;
     background-color: #ff5aa4;
     color: white;
-    padding: 20px 10px;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -286,8 +285,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espaciado entre los elementos */
-    margin-bottom: 15px; /* Espaciado entre los íconos y el menú */
+    gap: 10px;
+    height: 100px;
 }
 
 .header-content h1 {
@@ -305,8 +304,7 @@ header {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
+    padding-bottom: 5px;
 }
 
 header a,
@@ -316,6 +314,7 @@ header a,
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
     padding: 5px 10px;
+    margin-bottom: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
 }

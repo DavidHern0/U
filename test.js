@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             showFinalMessage();
                             quizContainer.style.display = "none";
                         }
-                    }, 2);
+                    }, 1500);
                 } else {
                     if (notFailed) {
                         incorrectAnswers++;
