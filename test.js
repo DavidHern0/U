@@ -1,7 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const startButton = document.getElementById("start-button");
+    const startContainer = document.getElementById("start-container");
+    const quizContainer = document.querySelector(".container");
+    quizContainer.style.display = "none";
+    
+    startButton.addEventListener("click", () => {
+        startContainer.style.display = "none";
+        quizContainer.style.display = "block";
+        showQuestion(currentQuestion);
+    });
+
     const questionsContainer = document.getElementById("quiz");
     let currentQuestion = 0;
-    
+
     function shuffleAnswers(question) {
         const buttons = Array.from(question.querySelectorAll("button"));
         const errorMessage = question.querySelector('.error-message');
@@ -40,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     feedback.className = "feedback";
                     question.appendChild(feedback);
                 }
-                errorMessage.style.display = 'none'; 
+                errorMessage.style.display = 'none';
 
                 if (isCorrect) {
                     e.target.style.backgroundColor = "#4CAF50";
@@ -68,5 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     shuffleQuestions();
-    showQuestion(currentQuestion);
 });
