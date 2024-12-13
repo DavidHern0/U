@@ -323,3 +323,15 @@ header a,
     background-color: #d94f90;
     color: #fff;
 }
+
+.container,
+#start-container,
+#final-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
