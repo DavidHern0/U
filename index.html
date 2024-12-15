@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="/media/assets/favicon.ico">
     <title>Us</title>
 </head>
@@ -13,41 +13,42 @@
 <body>
     <header>
         <div class="header-content">
-            <img src="media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
-            <h1 style="margin-left: 10px;"><a href="index.html">Us</a></h1>
-            <img src="media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+            <img src="media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
+            <h1 style="margin-left: 10px;">
+                <a href="index.html" title="Ir a la página de inicio">Us</a>
+            </h1>
+            <img src="media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
                 <li><a href="html/map.html">Mapa</a></li>
                 <li><a href="html/timeline.html">Línea de tiempo</a></li>
                 <li><a href="html/test.html">Tests</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-
-    <div class="container">
+    <main class="container">
         <p>Hulaa</p>
-    </div>
+    </main>
 
-    <div id="welcome-popup" class="popup">
+    <div id="welcome-popup" class="popup" role="dialog" aria-labelledby="popup-title" aria-describedby="popup-description">
         <div class="popup-content">
-            <h2>Hola bebé</h2>
-            <p>Inicié este proyecto el día 27/09, sin embargo lo llevo pensando desde que celebramos el cumpleaños.</p>
+            <h2 id="popup-title">Hola bebé</h2>
+            <p id="popup-description">Inicié este proyecto el día 27/09, sin embargo lo llevo pensando desde que celebramos el cumpleaños.</p>
             <br>
             <h3>Si estás viendo esto es porque hemos cumplido ½ año (6 meses) y estoy muy feliz contigo.</h3>
             <h2>Te quiero. Felices 6 meses.</h2>
-            <button id="close-popup-btn"><b>Continuar</b></button>
+            <button id="close-popup-btn" aria-label="Cerrar ventana emergente"><b>Continuar</b></button>
         </div>
     </div>
 
     <footer>
-        <section class="footer_container">
-            <div class="footer_main">
-                <img src="media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
+        <section class="footer-container">
+            <div class="footer-main">
+                <img src="media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
                 <p style="margin-left: 10px;">❤ Y por mucho más ❤</p>
-                <img src="media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+                <img src="media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
             </div>
         </section>
     </footer>

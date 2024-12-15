@@ -7,37 +7,44 @@
     <title>Mapa</title>
     <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="/../media/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../media/assets/favicon.ico">
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
-            <h1 style="margin-left: 10px;"><a href="../index.html">Us</a></h1>
-            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
+            <h1 style="margin-left: 10px;">
+                <a href="../index.html" title="Ir a la página de inicio">Us</a>
+            </h1>
+            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
-                <li><a href="map.html">Mapa</a></li>
+                <li><a href="map.html" aria-current="page">Mapa</a></li>
                 <li><a href="timeline.html">Línea de tiempo</a></li>
                 <li><a href="test.html">Tests</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <div class="container_map">
+    <main class="container-map">
         <h2>Mapa</h2>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rbqy0yLjEauIYo_uh1tavwxjXP30wns&ehbc=2E312F"
-            width="1280" height="720"></iframe>
-    </div>
+        <iframe 
+            src="https://www.google.com/maps/d/u/0/embed?mid=1rbqy0yLjEauIYo_uh1tavwxjXP30wns&ehbc=2E312F" 
+            width="1280" 
+            height="720" 
+            title="Mapa interactivo de Google"
+            loading="lazy">
+        </iframe>
+    </main>
 
     <footer>
-        <section class="footer_container">
-            <div class="footer_main">
-                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
+        <section class="footer-container">
+            <div class="footer-main">
+                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
                 <p style="margin-left: 10px;">❤ Y por mucho más ❤</p>
-                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
             </div>
         </section>
     </footer>

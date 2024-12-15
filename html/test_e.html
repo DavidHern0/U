@@ -7,138 +7,136 @@
     <title>Tests</title>
     <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="/../media/assets/favicon.ico">
-    <script src="../js/test.js"></script>
+    <link rel="icon" type="image/x-icon" href="../media/assets/favicon.ico">
+    <script src="../js/test.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
+            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="Icono MyMelody">
             <h1 style="margin-left: 10px;"><a href="../index.html">Us</a></h1>
-            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Icono Kuromi">
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
                 <li><a href="map.html">Mapa</a></li>
                 <li><a href="timeline.html">Línea de tiempo</a></li>
                 <li><a href="test.html">Tests</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <div id="start-container">
-        <h1>CUÁNTO TE CONOCES 🤨🤨🤨</h1>
-        <button id="start-button">Iniciar test</button>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+    <main>
+        <section id="start-container">
+            <h1>CUÁNTO TE CONOCES 🤨🤨🤨</h1>
+            <button id="start-button">Iniciar test</button>
+            <a class="return" href="test.html">Volver</a>
+        </section>
 
-    <div id="final-container" style="display: none;">
-        <h2>Test completado</h2>
-        <p id="final-score"></p>
-        <img id="final-image" src="" alt="Resultado" style="max-width: 100%; margin-top: 20px;">
-        <p><i>Dale un beso a tu novio, aunque sea. Que se lo ha currao</i></p>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+        <section id="final-container" hidden>
+            <h2>Test completado</h2>
+            <p id="final-score"></p>
+            <img id="final-image" src="" alt="Resultado" style="max-width: 100%; margin-top: 20px;">
+            <p><i>Dale un beso a tu novio, aunque sea. Que se lo ha currao</i></p>
+            <a class="return" href="test.html">Volver</a>
+        </section>
 
-    <div class="container">
-        <div id="quiz">
-            <div class="question">
+        <section id="quiz" class="container" hidden>
+            <article class="question">
                 <p>¿Cuál no es tu musical favorito?</p>
                 <button data-answer="incorrect">Mamma Mia 🎤</button>
                 <button data-answer="incorrect">La La Land 🎶</button>
                 <button data-answer="correct">Cats 🐱</button>
-                <p class="error-message" style="display: none;">¿Sabes leer?</p>
-            </div>
+                <p class="error-message" hidden>¿Sabes leer?</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Qué te gusta hacer en invierno?</p>
                 <button data-answer="correct">Tomar tacitas de chocolate 🍫☕</button>
                 <button data-answer="incorrect">Ir a la playa 🏖️</button>
                 <button data-answer="incorrect">Hacer senderismo 🥾</button>
-                <p class="error-message" style="display: none;">????????</p>
-            </div>
+                <p class="error-message" hidden>????????</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Qué lugar prefieres visitar en vacaciones?</p>
                 <button data-answer="correct">Andorra ⛰️</button>
                 <button data-answer="incorrect">Albacete 🗽</button>
                 <button data-answer="incorrect">L'hospitalet de Llobregat🏙</button>
-                <p class="error-message" style="display: none;">Joder, mira que era facil cariño mío</p>
-            </div>
+                <p class="error-message" hidden>Joder, mira que era fácil cariño mío</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Qué dulce japonés te encanta?</p>
                 <button data-answer="correct">Dango 🍡</button>
                 <button data-answer="correct">Dorayaki 🍩</button>
                 <button data-answer="correct">Anmitsu 🥗</button>
-                <p class="error-message" style="display: none;">🌟</p>
-            </div>
+                <p class="error-message" hidden>🌟</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Cuál es tu color favorito?</p>
                 <button data-answer="correct">Rojo ❤️</button>
                 <button data-answer="incorrect">Verde 💚</button>
                 <button data-answer="incorrect">Azul 💙</button>
-                <p class="error-message" style="display: none;"> Te conozco yo más que tu misma??? tonta o q</p>
-            </div>
+                <p class="error-message" hidden>Te conozco yo más que tú misma??? tonta o qué</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Cuál es tu película favorita?</p>
                 <button data-answer="correct">Orgullo y prejuicio 📚</button>
                 <button data-answer="correct">Mamma Mia 🎤</button>
                 <button data-answer="correct">Grease 🎬</button>
-                <p class="error-message" style="display: none;">🌟</p>
-            </div>
+                <p class="error-message" hidden>🌟</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Cuál es tu fruta favorita?</p>
                 <button data-answer="correct">Plátano 🍌</button>
                 <button data-answer="incorrect">Manzana 🍏</button>
                 <button data-answer="incorrect">Naranja 🍊</button>
-                <p class="error-message" style="display: none;">Aunque solo te guste lo que eres alérgica yo te quiero
-                    igual ♥</p>
-            </div>
+                <p class="error-message" hidden>Aunque solo te guste lo que eres alérgica, yo te quiero igual ♥</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Qué chocolate prefieres?</p>
                 <button data-answer="correct">Chocolate con leche 🍫</button>
                 <button data-answer="correct">Chocolate blanco 🍫</button>
                 <button data-answer="incorrect">Chocolate negro 🍫</button>
-                <p class="error-message" style="display: none;">Pedazo de </p>
-            </div>
+                <p class="error-message" hidden>Pedazo de...</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Te gustan los baños termales?</p>
                 <button data-answer="correct">Sí 💧</button>
                 <button data-answer="incorrect">No 🚫</button>
-                <p class="error-message" style="display: none;">????????</p>
-            </div>
+                <p class="error-message" hidden>????????</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Cuál es el café que siempre pides?</p>
                 <button data-answer="correct">Café con leche pero corto de café☕</button>
                 <button data-answer="incorrect">Expreso ☕</button>
                 <button data-answer="incorrect">Pumpkin spice latte ☕</button>
-                <p class="error-message" style="display: none;">Lo haces aposta, ¿Verdad?</p>
-            </div>
+                <p class="error-message" hidden>Lo haces aposta, ¿Verdad?</p>
+            </article>
 
-            <div class="question">
+            <article class="question">
                 <p>¿Prefieres las películas de Tim Burton o las de Studio Ghibli?</p>
                 <button data-answer="correct">Tim Burton 🎬</button>
                 <button data-answer="correct">Studio Ghibli 🎬</button>
-                <p class="error-message" style="display: none;">🌟</p>
-            </div>
-        </div>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+                <p class="error-message" hidden>🌟</p>
+            </article>
+        </section>
+    </main>
 
     <footer>
-        <section class="footer_container">
-            <div class="footer_main">
-                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
+        <section class="footer-container">
+            <div class="footer-main">
+                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="Icono MyMelody">
                 <p style="margin-left: 10px;">❤ Y por mucho más ❤</p>
-                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Icono Kuromi">
             </div>
         </section>
     </footer>

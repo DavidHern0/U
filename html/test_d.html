@@ -7,123 +7,127 @@
     <title>Tests</title>
     <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="/../media/assets/favicon.ico">
-    <script src="../js/test.js"></script>
+    <link rel="icon" type="image/x-icon" href="../media/assets/favicon.ico">
+    <script src="../js/test.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
-            <h1 style="margin-left: 10px;"><a href="../index.html">Us</a></h1>
-            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+            <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
+            <h1 style="margin-left: 10px;">
+                <a href="../index.html" title="Ir a la página de inicio">Us</a>
+            </h1>
+            <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
                 <li><a href="map.html">Mapa</a></li>
                 <li><a href="timeline.html">Línea de tiempo</a></li>
-                <li><a href="test.html">Tests</a></li>
+                <li><a href="test.html" aria-current="page">Tests</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <div id="start-container">
-        <h1>CUÁNTO ME CONOCES 🤨🤨🤨</h1>
-        <button id="start-button">Iniciar test</button>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+    <main>
+        <section id="start-container">
+            <h1>¿CUÁNTO ME CONOCES? 🤨🤨🤨</h1>
+            <button id="start-button">Iniciar test</button>
+            <a class="return" href="test.html">Volver</a>
+        </section>
 
-    <div id="final-container" style="display: none;">
-        <h2>Test completado</h2>
-        <p id="final-score"></p>
-        <img id="final-image" src="" alt="Resultado" style="max-width: 100%; margin-top: 20px;">
-        <p><i>Dale un beso a tu novio, aunque sea. Que se lo ha currao</i></p>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+        <section id="final-container" style="display: none;">
+            <h2>Test completado</h2>
+            <p id="final-score"></p>
+            <img id="final-image" src="" alt="Resultado" style="max-width: 100%; margin-top: 20px;">
+            <p><i>Dale un beso a tu novio, aunque sea. Que se lo ha currado</i></p>
+            <a class="return" href="test.html">Volver</a>
+        </section>
 
-    <div class="container">
-        <div id="quiz">
-            <div class="question">
-                <p>¿Cuál es mi película favorita de Star Wars?</p>
-                <button data-answer="incorrect">Episodio I: La amenaza fantasma</button>
-                <button data-answer="incorrect">Episodio VII: El despertar de la fuerza</button>
-                <button data-answer="correct">Episodio III: La venganza de los Sith</button>
-                <p class="error-message" style="display: none;">Y esta es de las fáciles</p>
-            </div>
+        <section class="container">
+            <div id="quiz">
+                <!-- Preguntas -->
+                <article class="question">
+                    <p>¿Cuál es mi película favorita de Star Wars?</p>
+                    <button data-answer="incorrect">Episodio I: La amenaza fantasma</button>
+                    <button data-answer="incorrect">Episodio VII: El despertar de la fuerza</button>
+                    <button data-answer="correct">Episodio III: La venganza de los Sith</button>
+                    <p class="error-message" style="display: none;">Y esta es de las fáciles</p>
+                </article>
 
-            <div class="question">
-                <p>¿Mi superhéroe favorito de Marvel es:</p>
-                <button data-answer="incorrect">Iron Man</button>
-                <button data-answer="correct">Spiderman</button>
-                <button data-answer="incorrect">Thor</button>
-                <p class="error-message" style="display: none;">Gilipollas</p>
+                <article class="question">
+                    <p>¿Mi superhéroe favorito de Marvel es:</p>
+                    <button data-answer="incorrect">Iron Man</button>
+                    <button data-answer="correct">Spiderman</button>
+                    <button data-answer="incorrect">Thor</button>
+                    <p class="error-message" style="display: none;">Gilipollas</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Mi libro favorito es...?:</p>
+                    <button data-answer="incorrect">Dune</button>
+                    <button data-answer="correct">Amanecer rojo</button>
+                    <button data-answer="incorrect">Juegos del hambre</button>
+                    <p class="error-message" style="display: none;">Como te vea leyendo este mensaje te mato</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Qué constelación astronómica me gusta más?</p>
+                    <button data-answer="incorrect">Escorpio</button>
+                    <button data-answer="correct">Orión</button>
+                    <button data-answer="incorrect">Cassiopeia</button>
+                    <p class="error-message" style="display: none;">Bueno no pasa nada</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Cuál mitología me gusta más?</p>
+                    <button data-answer="incorrect">Romana</button>
+                    <button data-answer="correct">Griega</button>
+                    <p class="error-message" style="display: none;">Pero si los romanos se calcaron los dioses griegos</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Qué libros suelo leer?</p>
+                    <button data-answer="incorrect">Novelas románticas</button>
+                    <button data-answer="correct">Libros de ciencia ficción</button>
+                    <button data-answer="incorrect">Biografías históricas</button>
+                    <p class="error-message" style="display: none;">¡Explorar mundos imaginarios y futuros!</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Qué civilización antigua me llama más la atención?</p>
+                    <button data-answer="correct">El Imperio Romano</button>
+                    <button data-answer="incorrect">Egipto</button>
+                    <button data-answer="incorrect">Mesopotamia</button>
+                    <p class="error-message" style="display: none;">¡Una cultura influyente en la historia!</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Cuál de estas actividades me gusta más?</p>
+                    <button data-answer="incorrect">Ir a la discoteca</button>
+                    <button data-answer="correct">Senderismo</button>
+                    <button data-answer="incorrect">Jugar fútbol</button>
+                    <p class="error-message" style="display: none;">jiji</p>
+                </article>
+                
+                <article class="question">
+                    <p>¿Cuál es mi color favorito de ropa?</p>
+                    <button data-answer="correct">Negro</button>
+                    <button data-answer="incorrect">Rojo</button>
+                    <button data-answer="correct">Blanco</button>
+                    <p class="error-message" style="display: none;">Es que me dijiste que me queda bien</p>
+                </article>
             </div>
-            
-            <div class="question">
-                <p>¿Mi libro favorito es...?:</p>
-                <button data-answer="incorrect">Dune</button>
-                <button data-answer="correct">Amanecer rojo</button>
-                <button data-answer="incorrect">Juegos del hambre</button>
-                <p class="error-message" style="display: none;">Como te vea leyendo este mensaje te mato</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Qué constelación astronómica me gusta más?</p>
-                <button data-answer="incorrect">Escoripio</button>
-                <button data-answer="correct">Orión</button>
-                <button data-answer="incorrect">Cassiopeia</button>
-                <p class="error-message" style="display: none;">Bueno no pasa nada</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Cuál mitología me gusta mas?</p>
-                <button data-answer="incorrect">Romana</button>
-                <button data-answer="correct">Griega</button>
-                <p class="error-message" style="display: none;">Pero si los romanos se calcaron los dioses griegos</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Qué libros suelo leer?</p>
-                <button data-answer="incorrect">Novelas románticas</button>
-                <button data-answer="correct">Libros de ciencia ficción</button>
-                <button data-answer="incorrect">Biografías históricas</button>
-                <p class="error-message" style="display: none;">¡Explorar mundos imaginarios y futuros!</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Qué civilización antigua me llama más la atención?</p>
-                <button data-answer="correct">El Imperio Romano</button>
-                <button data-answer="incorrect">Egipto</button>
-                <button data-answer="incorrect">Mesopotamia</button>
-                <p class="error-message" style="display: none;">¡Una cultura influyente en la historia!</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Cuál de estas actividades me gusta más?</p>
-                <button data-answer="incorrect">Ir a la discoteca</button>
-                <button data-answer="correct">Senderismo</button>
-                <button data-answer="incorrect">Jugar fútbol</button>
-                <p class="error-message" style="display: none;">jiji</p>
-            </div>
-            
-            <div class="question">
-                <p>¿Cuál es mi color favorito de ropa?</p>
-                <button data-answer="correct">Negro</button>
-                <button data-answer="incorrect">Rojo</button>
-                <button data-answer="correct">Blanco</button>
-                <p class="error-message" style="display: none;">Es que me dijiste que me queda bien</p>
-            </div>
-
-        </div>
-        <a class="return" href="test.html">Volver</a>
-    </div>
+            <a class="return" href="test.html">Volver</a>
+        </section>
+    </main>
 
     <footer>
-        <section class="footer_container">
-            <div class="footer_main">
-                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110px" alt="MyMelody Hearth">
+        <section class="footer-container">
+            <div class="footer-main">
+                <img src="../media/assets/92ec93164d22fa8ec0e566dc87ff2ced.png" width="110" alt="MyMelody Heart">
                 <p style="margin-left: 10px;">❤ Y por mucho más ❤</p>
-                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140px" alt="Kuromi Hearth">
+                <img src="../media/assets/d7573c74578996f405041b5cb4425c9d.png" width="140" alt="Kuromi Heart">
             </div>
         </section>
     </footer>
