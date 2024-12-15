@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Lato:wght@100..900&display=swap');
 
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f7f7f7;
-    background-image: url("/media/assets/7e089ac5bbb5231398b3dfa522c9aea9.jpg");
-    background-attachment: fixed;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
 img {
     -webkit-user-drag: none;
     -khtml-user-drag: none;

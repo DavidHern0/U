@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const finalImage = document.getElementById("final-image");
 
         const feedbackOptions = [
-            { minScore: questions.length, src: "media/assets/cat-cat-jumping.gif"},
-            { minScore: !questions.length, src: "media/assets/sus.gif"}
+            { minScore: questions.length, src: "../media/assets/cat-cat-jumping.gif"},
+            { minScore: !questions.length, src: "../media/assets/sus.gif"}
         ];
     
         const feedback = feedbackOptions.find(option => questions.length - incorrectAnswers >= option.minScore);
