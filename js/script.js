@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('popupShown')) {
         welcomePopup.style.display = 'flex';
     }
-
-    closePopupBtn.addEventListener('click', () => {
-        welcomePopup.style.display = 'none';
-        localStorage.setItem('popupShown', 'true');
-    });
-
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', () => {
+            welcomePopup.style.display = 'none';
+            localStorage.setItem('popupShown', 'true');
+        });
+    }
 });

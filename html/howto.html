@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../media/assets/favicon.ico">
+    <script src="../js/howto.js" defer></script>
     <script src="../js/script.js"></script>
     <title>Mapa</title>
 </head>
@@ -30,13 +30,18 @@
         </nav>
     </header>
 
-    <main class="container-map">
-        <h2>Mapamundi</h2>
-        <h3>Sobre los planes que podemos hacer (si quieres)</h3>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1H6TYHvsSz4w9KRetg8Zl51zpjDeepQQ"
-            width="1280" height="720" title="Mapa interactivo de Google" loading="lazy">
-        </iframe>
-        <h3>Los íconos en negro son los planes que ya hemos hecho (y repetiría)</h3>
+    <main class="container">
+        <h2>Como llamar a tu novio</h2>
+        <form id="nameForm">
+            <label>
+                <input type="radio" name="option" value="mal"> En plan mal
+            </label><br>
+            <label>
+                <input type="radio" name="option" value="bien"> En plan bien
+            </label><br>
+            <button type="button" class="form" onclick="generateName()">¿Cómo vas a llamarme hoy?</button>
+        </form>
+        <div class="result" id="result"></div>
     </main>
 
     <footer>
