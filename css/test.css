@@ -73,7 +73,7 @@ footer {
 }
 
 header,
-.footer-main {
+.footer_main {
     display: flex;
     justify-content: center;
     align-items: center;

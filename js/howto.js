@@ -1,5 +1,24 @@
 const nombresBien = ["Amor", "Bebé", "Bebito", "Amorcito", "Bonito", "Guapo", "Lindo", "Cuqui"];
-const nombresMal = ["Tonto", "Puto", "Gilipollas", "Subnormal", "Idiota", "Payaso", "Limpiacacas"];
+const nombresMal = ["Tonto", "Puto", "Gilipollas", "Subnormal", "Idiota", "Payaso", "Limpiacacas", "Marioneta del poder"];
+const imagesBien = [
+    '../media/assets/shibainu-dog.gif',
+    '../media/assets/cat-cat-jumping.gif',
+    '../media/assets/excited-dog.gif',
+    '../media/assets/dog-akita.gif',
+    '../media/assets/giphy.gif',
+    '../media/assets/200w.gif',
+    '../media/assets/dogs-funny.gif'
+];
+
+const imagesMal = [
+    '../media/assets/angry-cat-sour-cat.gif',
+    '../media/assets/angry-dog-house-dog-snarling-grr-t7834yp75cyp513q.gif',
+    '../media/assets/luccabug-angry-cat.gif',
+    '../media/assets/56a614261d423da1825452363174c685.gif',
+    '../media/assets/dachshund-dog.gif',
+    '../media/assets/Kqy8.gif',
+    '../media/assets/dog-ocean.gif',
+];
 
 document.addEventListener("DOMContentLoaded", () => {
     const options = document.getElementsByName("option");
@@ -80,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
 function generateName() {
+    const resultContainer = document.getElementById("result");
     const options = document.getElementsByName('option');
     let selectedOption = null;
 
@@ -93,12 +112,24 @@ function generateName() {
     }
 
     if (!selectedOption) {
-        document.getElementById('result').textContent = "Por favor, selecciona una opción.";
+        resultContainer.textContent = "Por favor, selecciona una opción.";
         return;
     }
 
     const names = selectedOption === "bien" ? nombresBien : nombresMal;
+    const images = selectedOption === "bien" ? imagesBien : imagesMal;
     const randomName = names[Math.floor(Math.random() * names.length)];
+    const imageUrl = images[Math.floor(Math.random() * images.length)];
 
-    document.getElementById('result').textContent = `${randomName}`;
+    const imgElement = document.createElement('img');
+    imgElement.src = imageUrl;
+    imgElement.alt = randomName;
+    imgElement.width = '250';
+
+    const h2Element = document.createElement('h2');
+    h2Element.textContent = randomName;
+
+    resultContainer.innerHTML = '';
+    resultContainer.appendChild(h2Element);
+    resultContainer.appendChild(imgElement);
 }
