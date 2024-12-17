@@ -418,6 +418,22 @@ button:hover {
     color: #574bdb;
 }
 
+hr {
+    border: 2px solid #ff5aa4;
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#fin {
+    display: flex;
+    color: dimgrey;
+    background-color: floralwhite;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
 @media (max-width: 768px) {
     .nav ul {
         flex-direction: column;

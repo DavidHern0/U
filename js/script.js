@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const welcomePopup = document.getElementById('welcome-popup');
     const closePopupBtn = document.getElementById('close-popup-btn');
-
+    const poemElement = document.getElementById('poem');
+    
     if (welcomePopup) {
         if (!localStorage.getItem('popupShown')) {
             welcomePopup.style.display = 'flex';
@@ -84,5 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return poems[indexAleatorio];
     }
 
-    document.getElementById('poem').innerText = seleccionarPoemaAleatorio();
+    if (poemElement) {
+        poemElement.innerText = seleccionarPoemaAleatorio();
+    }
 });
