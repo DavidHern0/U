@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const finElement = document.getElementById('fin');
     const timelineItems = document.querySelectorAll('.timeline-item');
     let currentIndex = 0;
     const nextDayBtn = document.getElementById('next-day-btn');
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentIndex++;
         } else {
+            finElement.style.display = 'flex'
             nextDayBtn.textContent = 'Todos los días mostrados';
             nextDayBtn.disabled = true;
             nextDayBtn.style.display = 'none';
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add('visible');
         });
         nextDayBtn.style.display = 'none';
+        finElement.style.display = 'flex';
         localStorage.setItem('showAll', 'true');
     };
 

@@ -426,7 +426,7 @@ hr {
 }
 
 #fin {
-    display: flex;
+    display: none;
     color: dimgrey;
     background-color: floralwhite;
     justify-content: center;
