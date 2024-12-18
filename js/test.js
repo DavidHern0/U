@@ -35,11 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showQuestion(index) {
-        questions.forEach((q, i) => {
-            q.style.display = i === index ? "block" : "none";
+        const questionContainers = document.querySelectorAll(".question_container");
+    
+        questionContainers.forEach((container, i) => {
+            const question = container.querySelector(".question");
+            const image = container.querySelector(".question_image");
+    
+            if (i === index) {
+                container.style.display = "block";
+                question.style.display = "block";
+                if (image) image.hidden = false; 
+            } else {
+                container.style.display = "none";
+                if (image) image.hidden = true; 
+            }
         });
-        shuffleAnswers(questions[index]);
+    
+        shuffleAnswers(questionContainers[index].querySelector(".question"));
     }
+    
 
     questions.forEach((question, index) => {
         const buttons = question.querySelectorAll("button");

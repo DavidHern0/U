@@ -43,13 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
             me hace una gayola.`,
 
         `-Ven aqui putita que te voy a dar lo tuyo 
-
             -Que me has llamado Juan? 
-
             -Es que me preguntaba, cerda mia, si no te apeteceria que antes de ir a cenar te echase lo que es un buen polvo.. cacho guarra
         `,
         `-¿Me estás llamando fea?
-        -No cariño, tú no eres fea, tú eres del montón, o sea, del montón bueno, porque hay un montón bueno y un montón malo. Bueno, pues tú eres del montón bueno. Luego está el montón que te cagas, pero esas están aparte y, además, qué estoy diciendo, si a mí lo que me gusta es una mujer inteligente.
+        -No cariño, tú no eres fea, tú eres del montón, o sea, del montón bueno, porque hay un montón bueno y un montón malo. Bueno, pues tú eres del montón bueno. Luego está el montón que te cagas, pero esas están aparte y, además, qué estoy diciendo, si a mí lo que me gusta es una mujer inteligente..
         `,
         `-Ahora sí que sí. dos tabiques rectos, lisitos y pintados en el mismo tono que el salón. Decisión estética tan errónea como respetable.
         -Todo eso está muy bien, pero no nota que le falta algo.
@@ -77,7 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         -Mariano.
         -Y también Han secuestrado a Paco
         -Presidente,  el gay está fuera de control.
-        `
+        `,
+        `El día que te vi
+        yo me enamoré de ti
+        de tus ojos preciosos 
+        ay que me miran golosos. 
+        Golosos de golosina 
+        que te voy a poner fina. 
+        Que te voy a poner finaa`
     ];
 
     function seleccionarPoemaAleatorio() {

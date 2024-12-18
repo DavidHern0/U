@@ -1,5 +1,5 @@
 const nombresBien = ["Amor", "Bebé", "Bebito", "Amorcito", "Bonito", "Guapo", "Lindo", "Cuqui"];
-const nombresMal = ["Tonto", "Puto", "Gilipollas", "Subnormal", "Idiota", "Payaso", "Limpiacacas", "Marioneta del poder"];
+const nombresMal = ["Puto", "Gilipollas", "Subnormal", "Idiota", "Payaso", "Limpiacacas", "Marioneta del poder"];
 const imagesBien = [
     '../media/assets/shibainu-dog.gif',
     '../media/assets/cat-cat-jumping.gif',

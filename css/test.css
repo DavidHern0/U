@@ -130,3 +130,8 @@ header,
 .return:hover {
     color: #b93e76;
 }
+
+.question_image {
+    margin-top: 50px;
+    width: 250px;
+}
